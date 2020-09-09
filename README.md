@@ -1,4 +1,4 @@
-# my commonly used utils to handle pdfs、txts and mine useful information.
+# my commonly used utils to handle pdfs、txts and extract useful information.
 <p align="center">
     <a href="https://github.com/elegantcoin/utils"><img src="https://img.shields.io/badge/status-updating-brightgreen.svg"></a>
     <a href="https://github.com/python/cpython"><img src="https://img.shields.io/badge/Python-3.7-FF1493.svg"></a>
