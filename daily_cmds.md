@@ -26,13 +26,17 @@
 -   `find /tmp/path -3M|xargs tar cf /tmp/compress.tar` tar fills <3M in path
 -   `find ./ -name "*" -size +3M` find files >3M
 -   `find ./ -name "*.txt|xargs cat >3.txt"` cat into one file
+-   `wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh` get ananconda
 -   `vim ~/.bash_history`
+-   `vim ~/.bashrc`
+-   `vim ~/.bash_profile`
 -   `nohup jupyter 2>&1 &` nohup
 -   `jupyter notebook >jupyter.log 2>&1 &`
 -   `ps -aux |egrep test.sh|egrep -v grep|awk '${print $0}'|sort -k 2 -n`
 -   `ps -aux|egrep python |xargs  kill -9` careful if root user
 -   `ps -eo pid,sgi_p,cmd --sort sgi_p|egrep "python"`
 -   `magick -loop 0 -delay 10 fram*.jpg frame.gif` generate gifs
+-   `rsvg-convert -z 10.0 pprof001_true.svg >pprof001.png` convert to png
 -   `tree -df` tree dir
 -   `tree -L 3` tree 3 levels
 -   `tree -dfIL "*anaconda*|*git*" 3` tree ignore keywords
@@ -43,11 +47,12 @@
 -   `sed -i'.bak' 's/words/word/g'  my_log.log` replace global
 -   `head my_log.log|awk -F ',' '{printf("%s %s\n",split($0,var_arr,","),var_arr[1])}' `print lines?
 -   `python -m cProfile my_script.py` cProfile
+-   `go tool pprof cpu.out` go Profile
 -   `/bin/spark2-submit --master yarn --deploy-mode client --queue username --driver-memory 32g --executor-cores 10 --executor-memory 32g` spark
 -   
 
 ```bash
-    # bash version of python style zip()
+    # Python zip() behavior in bash
     file_names=$(ls *.txt)
     file_arr=($file_names)
     var_arr=($file_arr)
@@ -61,7 +66,19 @@
     mv file_$i.qgz file${s_one}.qgz
 ```
 -   ``
+```bash
+    # function in bash
+    auto_triger() {
+        msg=$1
+        echo ${msg}
+    }
+    auto_triger "this is a func"
+```
 -   ``
+```bash
+    # crontab -l -e
+    30 09 * * * cd /tmp/robot && sh start_robot.sh >>robot.log 2>&1
+```
 -   ``
 -   ``
 -   ``
