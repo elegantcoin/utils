@@ -24,6 +24,8 @@
 -   `tar cf /tmp/compress.tar /big/tree --exclude-from <(find /big/tree -size +3M)` tar
 -   `tar czf /tmp/compress.tar |split -b 1000m - small-file.tar` split tar file
 -   `find /tmp/path -3M|xargs tar cf /tmp/compress.tar` tar fills <3M in path
+-   `find ./ -name "*" -size +3M` find files >3M
+-   `find ./ -name "*.txt|xargs cat >3.txt"` cat into one file
 -   `vim ~/.bash_history`
 -   `nohup jupyter 2>&1 &` nohup
 -   `jupyter notebook >jupyter.log 2>&1 &`
@@ -35,13 +37,29 @@
 -   `tree -L 3` tree 3 levels
 -   `tree -dfIL "*anaconda*|*git*" 3` tree ignore keywords
 -   `rename 's/\.jpeg/\.jpg' *.jpeg` rename using regx
--   ``
--   ``
--   ``
--   ``
--   ``
--   ``
--   ``
+-   `cat my_log.log|egrep ''$'\t123'$'\tsname'|sort -k 1 -k 2` egrep \t and sort
+-   `ls --sort=none` no sorting when ls(useful in huge files folder)
+-   `aek '! a[$0]++'` drop duplicate
+-   `sed -i'.bak' 's/words/word/g'  my_log.log` replace global
+-   `head my_log.log|awk -F ',' '{printf("%s %s\n",split($0,var_arr,","),var_arr[1])}' `print lines?
+-   `python -m cProfile my_script.py` cProfile
+-   `/bin/spark2-submit --master yarn --deploy-mode client --queue username --driver-memory 32g --executor-cores 10 --executor-memory 32g` spark
+-   
+
+```bash
+    # bash version of python style zip()
+    file_names=$(ls *.txt)
+    file_arr=($file_names)
+    var_arr=($file_arr)
+    i=0
+    for s_one in $file_names;do
+    ((i++))
+    my_count=$(cat $s_one |wc -l)
+    my_content=$(sed 's/\\n/\\\\n/g' $s_one)
+    echo "${var_arr[${i}]}"
+    echo "#\n#${s_one}|${my_count}\n\n${my_content}\n\n" >>all.txt
+    mv file_$i.qgz file${s_one}.qgz
+```
 -   ``
 -   ``
 -   ``
