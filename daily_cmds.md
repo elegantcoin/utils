@@ -18,6 +18,10 @@
 -   `split -l 1000 -a 3 bigfiles.txt smallfiles.txt` split files
 -   `mysql/redis-cli -h service -P xxxx -u username -p password` mysql
 -   `docker ps` docker
+-   `docker commit 1234 softeorename:v2.0` docker commit
+-   `docker save -o softeorename.tar softeorename:v2.0` docker save
+-   `docker load -i softeorename.tar` docker load
+-   `docker run -dit -v /tmp/localpath:home --name softeorename softeorename:v2.0`
 -   `docker exec -it 100 /bin/bash`
 -   `keys * / get key 100` redis
 -   `tar -cvf compress.tar /filefolder --exclude=./.ssh` tar
