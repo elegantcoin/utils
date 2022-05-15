@@ -49,7 +49,6 @@
 -   `ls --sort=none` no sorting when ls(useful in huge files folder)
 -   `aek '! a[$0]++'` drop duplicate
 -   `sed -i'.bak' 's/words/word/g'  my_log.log` replace global
--   `head my_log.log|awk -F ',' '{printf("%s %s\n",split($0,var_arr,","),var_arr[1])}' `print lines?
 -   `python -m cProfile my_script.py` cProfile
 -   `go tool pprof cpu.out` go Profile
 -   `/bin/spark2-submit --master yarn --deploy-mode client --queue username --driver-memory 32g --executor-cores 10 --executor-memory 32g` spark
@@ -63,6 +62,7 @@
     i=0
     for s_one in $file_names;do
     ((i++))
+    # head my_log.log|awk -F ',' '{printf("%s %s\n",split($0,var_arr,","),var_arr[1])}
     my_count=$(cat $s_one |wc -l)
     my_content=$(sed 's/\\n/\\\\n/g' $s_one)
     echo "${var_arr[${i}]}"
