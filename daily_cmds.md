@@ -12,6 +12,7 @@
 <br />
 
 ## :fire:Terminal终端:
+-   `git remote set-url origin https://codeXXXXXXXXXXXXXXXXXXXX@github.com/elegantcoin/utils.git` 登录git
 -   `rsync --bwlimit=1000 -artP file1 -e 'ssh -p xxxx' user@targetmachine:file2`
 -   `cat cmd_lines_2022-05_15.log|egrep -E "history lines |\(103\)"`
 -   `split -l 1000 -a 3 bigfiles.txt smallfiles.txt` split files
@@ -20,7 +21,37 @@
 -   `docker exec -it 100 /bin/bash`
 -   `keys * / get key 100` redis
 -   `tar -cvf compress.tar /filefolder --exclude=./.ssh` tar
--   `` tar
+-   `tar cf /tmp/compress.tar /big/tree --exclude-from <(find /big/tree -size +3M)` tar
+-   `tar czf /tmp/compress.tar |split -b 1000m - small-file.tar` split tar file
+-   `find /tmp/path -3M|xargs tar cf /tmp/compress.tar` tar fills <3M in path
+-   `vim ~/.bash_history`
+-   `nohup jupyter 2>&1 &` nohup
+-   `jupyter notebook >jupyter.log 2>&1 &`
+-   `ps -aux |egrep test.sh|egrep -v grep|awk '${print $0}'|sort -k 2 -n`
+-   `ps -aux|egrep python |xargs  kill -9` careful if root user
+-   `ps -eo pid,sgi_p,cmd --sort sgi_p|egrep "python"`
+-   `magick -loop 0 -delay 10 fram*.jpg frame.gif` generate gifs
+-   `tree -df` tree dir
+-   `tree -L 3` tree 3 levels
+-   `tree -dfIL "*anaconda*|*git*" 3` tree ignore keywords
+-   `rename 's/\.jpeg/\.jpg' *.jpeg` rename using regx
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
+-   ``
 -   ``
 -   ``
 -   ``
