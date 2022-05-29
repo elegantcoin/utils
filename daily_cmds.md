@@ -12,7 +12,7 @@
 <br />
 
 ## :fire:Terminal终端:
--   `git remote set-url origin https://codeXXXXXXXXXXXXXXXXXXXX@github.com/elegantcoin/utils.git` 登录git
+-   `git remote set-url origin https://XXXXXXXXXXXXXXXXXXXX@github.com/elegantcoin/utils.git` 登录git
 -   `rsync --bwlimit=1000 -artP file1 -e 'ssh -p xxxx' user@targetmachine:file2`
 -   `cat cmd_lines_2022-05_15.log|egrep -E "history lines |\(103\)"`
 -   `split -l 1000 -a 3 bigfiles.txt smallfiles.txt` split files
